@@ -1,6 +1,6 @@
 /**
  * Button Component
- * A reusable button component that supports different variants and optional links.
+ * A reusable button component that supports different variants, optional links, and custom classes.
  */
 
 import React from "react";
@@ -12,21 +12,23 @@ type ButtonProps = {
   children: React.ReactNode; // Content to be displayed inside the button
   variant: "default" | "active"; // Variant of the button, default or active
   link?: string | undefined; // Optional link; if provided, an <a> tag is rendered inside
+  className?: string | null; // Optional custom class name
 };
 
 /**
  * Button component
- * Renders a button with optional link and variant styling.
+ * Renders a button with optional link, variant styling, and additional class names.
  */
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = "default",
   link = null,
+  className = "",
 }) => {
   return (
     <button
       type="button"
-      className={(variant !== "active" ? "" : "active") + " _button"}
+      className={`${variant === "active" ? "active" : ""} _button ${className}`}
     >
       {/* Render an anchor tag if a link is provided */}
       {link && <a href={link}></a>}

@@ -16,6 +16,16 @@
   ._button > a {
     @apply block absolute top-0 left-0 w-full h-full;
   }
+
+  ._navigation {
+    @apply relative;
+  }
+  ._navigation ul li {
+    @apply relative px-0.5 py-0.5;
+  }
+  ._navigation ul li > a {
+    @apply block w-full h-full absolute top-0 left-0;
+  }
 }
 
 @layer utilities {
