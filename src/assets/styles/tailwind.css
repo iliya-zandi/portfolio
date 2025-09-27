@@ -26,6 +26,12 @@
   ._navigation ul li > a {
     @apply block w-full h-full absolute top-0 left-0;
   }
+  ._box {
+    @apply flex py-2 flex-col gap-y-2;
+  }
+  ._box ._box_header {
+    @apply flex flex-row justify-between;
+  }
 }
 
 @layer utilities {

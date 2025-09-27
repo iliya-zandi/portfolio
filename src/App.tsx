@@ -13,6 +13,7 @@ import {
   LinkedinLogo,
   TwitterLogo,
 } from "@phosphor-icons/react";
+import Box from "./components/Box";
 /**
  * Import React to use JSX syntax.
  */
@@ -52,15 +53,22 @@ const App = () => {
   return (
     <div className="container py-8">
       <h1 className="text-4xl font-bold mb-4">Portfolio.</h1>
-      <Button variant="default" className="mb-4">
-        Submit
-      </Button>
-      <Navigation
-        className="flex gap-x-4"
-        showIcon={true}
-        showText={false}
-        items={socials}
-      />
+
+      <Box
+        title="Socials of us"
+        button={
+          <Button variant="default" className="mb-4">
+            Get more
+          </Button>
+        }
+      >
+        <Navigation
+          className="flex gap-x-4"
+          showIcon={true}
+          showText={false}
+          items={socials}
+        />
+      </Box>
     </div>
   );
 };
