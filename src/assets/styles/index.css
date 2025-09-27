@@ -1,2 +1,7 @@
+/* -------------------- IMPORT FONTS -------------------- */
+/* Import custom fonts */
 @import "./fonts.css";
+
+/* -------------------- IMPORT TAILWIND -------------------- */
+/* Import Tailwind CSS setup including base, components, and utilities */
 @import "./tailwind.css";

@@ -1,54 +1,85 @@
+/* Import Tailwind CSS base, components, and utilities */
 @import "tailwindcss";
 
+/* -------------------- BASE LAYER -------------------- */
 @layer base {
+  /* Make all buttons show pointer cursor */
   button {
     @apply cursor-pointer;
   }
 }
 
+/* -------------------- COMPONENTS LAYER -------------------- */
 @layer components {
+  /* Base button styling */
   ._button {
-    @apply px-8 py-2.5 border border-gray-300/50 rounded-xl font-medium text-slate-900/80 text-[15px] focus:scale-95 focus:border-gray-300/80 transition-transform ease-out relative overflow-hidden;
+    @apply px-8 py-2.5 border border-gray-300/50 rounded-xl font-medium text-slate-900/80 text-[15px] 
+           focus:scale-95 focus:border-gray-300/80 transition-transform ease-out relative overflow-hidden;
   }
+
+  /* Active button variant */
   ._button.active {
     @apply bg-zinc-900/95 text-white/95;
   }
+
+  /* Anchor inside button fills the entire button for clickable area */
   ._button > a {
     @apply block absolute top-0 left-0 w-full h-full;
   }
 
+  /* Navigation container */
   ._navigation {
     @apply relative;
   }
+
+  /* Navigation list items */
   ._navigation ul li {
     @apply relative px-0.5 py-0.5;
   }
+
+  /* Anchor inside navigation list items fills the whole item */
   ._navigation ul li > a {
     @apply block w-full h-full absolute top-0 left-0;
   }
+
+  /* Box component container */
   ._box {
     @apply flex py-2 flex-col gap-y-2;
   }
+
+  /* Box header layout */
   ._box ._box_header {
     @apply flex flex-row justify-between;
   }
 }
 
+/* -------------------- UTILITIES LAYER -------------------- */
 @layer utilities {
+  /* Container for consistent max-width and horizontal padding */
   .container {
     @apply max-w-full lg:max-w-6xl mx-auto px-4 lg:px-8;
   }
+
+  /* Flex container centered both vertically and horizontally */
   .flex-center {
     @apply items-center justify-center;
   }
+
+  /* Flex row utility */
   .row {
     @apply flex-row;
   }
+
+  /* Flex column utility */
   .col {
     @apply flex-col;
   }
+
+  /* Projects container */
   ._projects {
   }
+
+  /* Project article items */
   ._projects article {
     @apply flex flex-col overflow-hidden;
   }

@@ -1,8 +1,10 @@
+/* Import Montserrat font from Google Fonts with variable weights and styles */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Apply the Montserrat font globally to the body */
 body {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Montserrat", sans-serif; /* Primary font for the project */
+  font-optical-sizing: auto; /* Adjust optical sizing for better readability */
+  font-weight: 400; /* Default font weight */
+  font-style: normal; /* Default font style */
 }

@@ -1,24 +1,39 @@
+/**
+ * Projects Component
+ * Renders a list of project cards with image, title, category, and year.
+ */
+
 import React from "react";
 
+/**
+ * Type definition for a single project item.
+ */
 type ItemsOfProjects = {
-  id: number;
-  link: string;
-  text: string;
-  image: string;
-  category: string;
-  year: string;
+  id: number; // Unique identifier for the project
+  link: string; // URL to the project
+  text: string; // Project title
+  image: string; // URL of the project image
+  category: string; // Project category
+  year: string; // Year of the project
 };
 
+/**
+ * Props type for Projects component
+ */
 type ProjectsProps = {
-  items: ItemsOfProjects[];
+  items: ItemsOfProjects[]; // Array of project items
 };
 
+/**
+ * Projects component
+ * Maps over the items array and renders each project as a card with image, title, category, and year.
+ */
 const Projects: React.FC<ProjectsProps> = ({ items }) => {
   return (
     <div className="_projects">
       {items.map((item) => (
         <article key={item.id}>
-          {/*  */}
+          {/* Project image wrapped in a link */}
           <a href={item.link} className="inline">
             <img
               src={item.image}
@@ -26,6 +41,8 @@ const Projects: React.FC<ProjectsProps> = ({ items }) => {
               alt={item.text}
             />
           </a>
+
+          {/* Project details */}
           <div className="flex flex-row items-center justify-between py-4 px-4">
             <h4 className="text-4xl tracking-widest font-medium">
               {item.text}
@@ -42,3 +59,6 @@ const Projects: React.FC<ProjectsProps> = ({ items }) => {
 };
 
 export default Projects;
+/**
+ * Exporting Projects as default for use in other components.
+ */
