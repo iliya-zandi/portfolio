@@ -40,7 +40,7 @@ const Box: React.FC<BoxProps> = ({
       </div>
 
       {/* Box content */}
-      <div className="bg-amber-100">{children}</div>
+      <div>{children}</div>
     </section>
   );
 };

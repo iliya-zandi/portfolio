@@ -47,4 +47,9 @@
   .col {
     @apply flex-col;
   }
+  ._projects {
+  }
+  ._projects article {
+    @apply flex flex-col overflow-hidden;
+  }
 }

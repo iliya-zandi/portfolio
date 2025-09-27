@@ -14,9 +14,14 @@ import {
   TwitterLogo,
 } from "@phosphor-icons/react";
 import Box from "./components/Box";
+import Projects from "./components/Projects";
 /**
  * Import React to use JSX syntax.
  */
+
+import projectOne from "./assets/images/projectOne.jpg";
+import projectTwo from "./assets/images/projectTwo.jpg";
+import projectThree from "./assets/images/projectThree.jpg";
 
 const socials = [
   {
@@ -45,6 +50,33 @@ const socials = [
   },
 ];
 
+const portfolios = [
+  {
+    id: 1,
+    link: "one",
+    text: "one",
+    image: projectOne,
+    category: "art",
+    year: "2025",
+  },
+  {
+    id: 2,
+    link: "two",
+    text: "two",
+    image: projectTwo,
+    category: "design",
+    year: "2023",
+  },
+  {
+    id: 3,
+    link: "three",
+    text: "three",
+    image: projectThree,
+    category: "resources",
+    year: "2024",
+  },
+];
+
 const App = () => {
   /**
    * Main render function of the App component.
@@ -53,7 +85,12 @@ const App = () => {
   return (
     <div className="container py-8">
       <h1 className="text-4xl font-bold mb-4">Portfolio.</h1>
-
+      <Navigation
+        className="flex gap-x-4"
+        showIcon={true}
+        showText={false}
+        items={socials}
+      />
       <Box
         title="Socials of us"
         button={
@@ -62,12 +99,7 @@ const App = () => {
           </Button>
         }
       >
-        <Navigation
-          className="flex gap-x-4"
-          showIcon={true}
-          showText={false}
-          items={socials}
-        />
+        <Projects items={portfolios} />
       </Box>
     </div>
   );
