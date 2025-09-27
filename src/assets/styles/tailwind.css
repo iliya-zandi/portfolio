@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  ._button {
+    @apply px-8 py-2.5 border border-gray-300/50 rounded-xl font-medium text-slate-900/80 text-[15px] focus:scale-95 focus:border-gray-300/80 transition-transform ease-out relative overflow-hidden;
+  }
+  ._button.active {
+    @apply bg-zinc-900/95 text-white/95;
+  }
+  ._button > a {
+    @apply block absolute top-0 left-0 w-full h-full;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-full lg:max-w-6xl mx-auto px-4 lg:px-8;
+  }
+  .flex-center {
+    @apply items-center justify-center;
+  }
+  .row {
+    @apply flex-row;
+  }
+  .col {
+    @apply flex-col;
+  }
+}
