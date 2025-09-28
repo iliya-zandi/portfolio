@@ -44,7 +44,7 @@ const Projects: React.FC<ProjectsProps> = ({ items }) => {
 
           {/* Project details */}
           <div className="flex flex-row items-center justify-between py-4 px-4">
-            <h4 className="text-4xl tracking-widest font-medium">
+            <h4 className="text-3xl lg:text-4xl tracking-widest font-medium">
               {item.text}
             </h4>
             <div className="inline-flex gap-x-4 text-lg">

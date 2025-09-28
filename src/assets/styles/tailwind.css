@@ -44,7 +44,7 @@
 
   /* Box component container */
   ._box {
-    @apply flex py-12 flex-col gap-y-8;
+    @apply flex py-12 flex-col gap-y-3 lg:gap-y-8;
   }
 
   /* Box header layout */

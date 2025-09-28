@@ -141,16 +141,16 @@ const App = () => {
             <img
               src={avatar}
               alt="iliya zandi"
-              className="max-w-full mb-6 rounded-full object-cover w-[145px] h-[80px]"
+              className="max-w-full mb-6 rounded-full object-cover w-[145px] lg:h-[80px]"
             />
-            <h1 className="text-6xl font-bold tracking-wider text-slate-900 mb-3">
+            <h1 className="text-4xl lg:text-6xl font-bold tracking-wider text-slate-900 mb-3">
               Liam Carter
             </h1>
-            <h2 className="mb-5 text-xl font-normal tracking-tight text-slate-700">
+            <h2 className="mb-5 text-md lg:text-xl font-normal tracking-tight text-slate-700">
               Software Engineer, Designer, Founder
             </h2>
             <span className="h-[1px] bg-black/10 mb-4 w-1/5"></span>
-            <p className="text-slate-600 leading-7 text-center w-full xl:max-w-3xl mb-6">
+            <p className="text-slate-600 lg:leading-7 text-center w-full xl:max-w-3xl mb-6">
               I build elegant software solutions that solve real problems. I
               design intuitive and minimal user experiences that feel natural
               and engaging. I create innovative projects from the ground up,
@@ -190,8 +190,8 @@ const App = () => {
           >
             <div className="flex flex-col gap-y-16">
               {/** Post One */}
-              <article className="flex flex-row gap-x-16">
-                <div className="overflow-hidden w-1/4">
+              <article className="flex flex-col flex-center text-center lg:text-left lg:flex-row lg:gap-x-16 gap-y-8">
+                <div className="overflow-hidden lg:w-1/4">
                   <a href="/" className="inline">
                     <img
                       src={postOne}
@@ -217,8 +217,8 @@ const App = () => {
               </article>
 
               {/** Post Two */}
-              <article className="flex flex-row gap-x-16">
-                <div className="overflow-hidden w-1/4">
+              <article className="flex flex-col flex-center text-center lg:text-left lg:flex-row lg:gap-x-16 gap-y-8">
+                <div className="overflow-hidden lg:w-1/4">
                   <a href="/" className="inline">
                     <img
                       src={postTwo}
@@ -251,7 +251,7 @@ const App = () => {
             button={<Button variant="default">View all</Button>}
             className="container"
           >
-            <div className="flex flex-col gap-y-8">
+            <div className="flex flex-col gap-y-16">
               {testimonials.map((item) => (
                 <article key={item.id}>
                   <Quotes weight="light" className="mb-2" size={42} />
