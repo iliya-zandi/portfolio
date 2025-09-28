@@ -28,7 +28,9 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type="button"
-      className={`${variant === "active" ? "active" : ""} _button ${className}`}
+      className={`${
+        variant === "active" ? "active" : ""
+      }  _button ${className}`}
     >
       {/* Render an anchor tag if a link is provided */}
       {link && <a href={link}></a>}
